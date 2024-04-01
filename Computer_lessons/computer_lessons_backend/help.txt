@@ -1,0 +1,15 @@
+Краткая документация по проекту
+
+БАЗЫ ДАННЫХ
+Подключены в setting.py, используется для хранения данных (да? не знал... ну ты побольше такого рассказывай)
+1) устанавливаем пакет pip install psycopg2
+2) указываем подробности подключения (ENGINE, NAME, USER, PASSWORD, HOST, PORT) в DATABASES
+3) создаём нужные модели в models.py
+4) выполняем python manage.py makemigrations и python manage.py migrate
+
+CORS-ЗАГОЛОВКИ
+Подключены в setting.py, нужны для того, чтобы сервер мог принимать и отдавать запросы (а вот это интересненько и важненько)
+1) устанавливаем пакет pip install django-cors-headers
+2) добавляем corsheaders в INSTALLED_APPS
+3) добавляем corsheaders.middleware.CorsMiddleware в MIDDLEWARE (ОБЯЗАТЕЛЬНО ДО django.middleware.common.CommonMiddleware)
+4) указываем url-отправителя запросов (http://localhost:3000) в CORS_ALLOWED_ORIGINS

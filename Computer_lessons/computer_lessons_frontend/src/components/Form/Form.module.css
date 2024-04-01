@@ -1,0 +1,258 @@
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overAnimUp {
+  animation: opacityUp 0.3s forwards;
+}
+
+.overAnimDown {
+  animation: opacityDown 0.3s forwards;
+}
+
+@keyframes opacityUp {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityDown {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.form {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 20px;
+  width: 350px;
+  height: 700px;
+}
+
+.formAnimUp {
+  animation: popupUp 0.5s forwards;
+}
+
+.formAnimDown {
+  animation: popupDown 0.5s forwards;
+}
+
+@keyframes popupUp {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes popupDown {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+.headName {
+  display: flex;
+  margin-left: 280px;
+}
+
+.formClose {
+  font-size: 35px;
+  opacity: 0.5;
+  cursor: pointer;
+  padding: 15px 30px 0 0;
+
+  &:hover {
+    animation: formCloseHover 0.2s forwards;
+  }
+
+  &:not(:hover) {
+    animation: formCloseNotHover 0.2s forwards;
+  }
+}
+
+@keyframes formCloseHover {
+  0% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes formCloseNotHover {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.formBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    font-size: 18px;
+    height: 10px;
+  }
+
+  input {
+    background-color: transparent;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    width: 300px;
+    height: 30px;
+    margin-top: 30px;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+.formFooter {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.footerIcon {
+  margin-top: 10px;
+  font-size: 35px;
+  cursor: pointer;
+  opacity: 0.5;
+
+  &:hover {
+    animation: footerIconHover 0.3s forwards;
+  }
+
+  &:not(:hover) {
+    animation: footerIconNotHover 0.3s forwards;
+  }
+}
+
+@keyframes footerIconHover {
+  0% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes footerIconNotHover {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.signUp {
+  margin-top: 20px;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  width: 150px;
+  height: 40px;
+  font-size: 16px;
+  cursor: pointer;
+
+  &:hover {
+    animation: signUpHover 0.5s forwards;
+  }
+
+  &:not(:hover) {
+    animation: signUpNotHover 0.5s forwards;
+  }
+}
+
+@keyframes signUpHover {
+  0% {
+    background: none;
+    color: #000000;
+    border: 1px solid #000000;
+  }
+
+  100% {
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+}
+
+@keyframes signUpNotHover {
+  0% {
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  100% {
+    background: none;
+    color: #000000;
+    border: 1px solid #000000;
+  }
+}
+
+.isChangedRight {
+  animation: changedRight 0.5s forwards;
+}
+
+.isChangedLeft {
+  animation: changedLeft 0.5s forwards;
+}
+
+@keyframes changedRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes changedLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

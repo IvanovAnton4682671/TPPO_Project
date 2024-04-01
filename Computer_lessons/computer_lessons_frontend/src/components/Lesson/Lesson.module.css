@@ -1,0 +1,152 @@
+.card {
+  border: 1px solid #f3f3f3;
+  border-radius: 40px;
+  padding: 30px;
+  width: 200px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+
+  h5 {
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  &:hover {
+    animation: lessonsHoverShadow 0.5s forwards;
+  }
+
+  &:not(:hover) {
+    animation: lessonsNotHoverShadow 0.5s forwards;
+  }
+}
+
+.lessonsArrowForward {
+  font-size: 40px;
+}
+
+.lessonsArrowBack {
+  font-size: 40px;
+  margin-left: -20px;
+}
+
+.lessonsPlus {
+  font-size: 50px;
+  margin-bottom: 25px;
+}
+
+.cartLessonsPlus {
+  font-size: 40px;
+  margin-right: 5px;
+  min-width: 25px;
+  min-height: 25px;
+}
+
+.cardDescription {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardLines {
+  display: flex;
+  flex-direction: column;
+}
+
+.ciSquarePlus {
+  font-size: 30px;
+}
+
+.button {
+  background: #ffffff;
+  border: 0px solid #f2f2f2;
+  box-sizing: content-box;
+  border-radius: 8px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  opacity: 0.5;
+
+  &:hover {
+    animation: buttonAddHover 0.2s forwards;
+  }
+
+  &:not(:hover) {
+    animation: buttonAddNotHover 0.2s forwards;
+  }
+}
+
+@keyframes lessonsHoverShadow {
+  0% {
+    box-shadow: none;
+    transform: translateY(0px);
+  }
+
+  100% {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes lessonsNotHoverShadow {
+  0% {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+
+  100% {
+    box-shadow: none;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes buttonAddHover {
+  0% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes buttonAddNotHover {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.isChangedRight {
+  animation: changedRight 0.5s forwards;
+}
+
+.isChangedLeft {
+  animation: changedLeft 0.5s forwards;
+}
+
+@keyframes changedRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes changedLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

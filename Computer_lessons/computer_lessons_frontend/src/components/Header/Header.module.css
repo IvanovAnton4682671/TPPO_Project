@@ -1,0 +1,90 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+
+  h2,
+  p {
+    margin: 0;
+  }
+}
+
+.faComputer {
+  font-size: 70px;
+  margin-right: 15px;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  li {
+    list-style-type: none;
+    display: flex;
+    margin-right: 30px;
+    font-size: 50px;
+  }
+}
+
+.logIn {
+  border: 1px solid #000000;
+  border-radius: 20px;
+  width: 70px;
+  height: 40px;
+  font-size: 16px;
+  cursor: pointer;
+
+  &:hover {
+    animation: logInHover 0.5s forwards;
+  }
+
+  &:not(:hover) {
+    animation: logInNotHover 0.5s forwards;
+  }
+}
+
+@keyframes logInHover {
+  0% {
+    background: none;
+    color: #000000;
+    border: 1px solid #000000;
+  }
+
+  100% {
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+}
+
+@keyframes logInNotHover {
+  0% {
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  100% {
+    background: none;
+    color: #000000;
+    border: 1px solid #000000;
+  }
+}
+
+.logOut {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  h6 {
+    margin: 0;
+    margin-bottom: 15px;
+  }
+}
